@@ -4,8 +4,19 @@ Welcome to the E-Commerce App! This project is a client-side application that al
 We'd like to thank the following people who have contributed to this project:
 - **[Fady Mohsen](https://github.com/FadyM66)**
 - **[Kareem Morsy](https://github.com/KareemMMorsy)**
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
+- [License](#license)
 ## Technologies Used
 
 - HTML  
 - CSS  
 - JavaScript  
+
+
