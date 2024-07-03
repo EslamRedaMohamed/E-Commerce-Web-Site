@@ -13,6 +13,10 @@ We'd like to thank the following people who have contributed to this project:
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 - [License](#license)
+## Introduction
+
+The E-Commerce App is designed to provide a seamless shopping experience. Users can view products, add them to their cart, and proceed to checkout. The app focuses on providing a responsive and intuitive user interface.
+
 ## Technologies Used
 - HTML  
 - CSS  
