@@ -30,7 +30,7 @@ async function displayProducts() {
         productCard.innerHTML = `
             <img src="${product.thumbnail}" alt="${product.title}">
             <h4>${product.title}</h4>
-            <h3>Price: ${product.price}</h3>
+            <h3>Price: ${product.price} EGP</h3>
             <div class="icons" id="addcart">
                 <a href="#"><i class='bx bxs-cart-add'></i></a>
             </div>
