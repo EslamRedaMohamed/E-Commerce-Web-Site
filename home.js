@@ -41,3 +41,18 @@ async function displayProducts() {
 }
 
 document.addEventListener('DOMContentLoaded', displayProducts);
+
+// Function to filter products based on search input
+function searchProducts() {
+    var searchTerm = document.getElementById('search-input').value.trim().toLowerCase();
+    var productCards = document.querySelectorAll('.box');
+
+    productCards.forEach(card => {
+        var title = card.querySelector('h4').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';   
+        }
+    });
+}
