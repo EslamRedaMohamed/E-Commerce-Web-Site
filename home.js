@@ -22,7 +22,7 @@ console.log(fetchProducts())
 async function displayProducts() {
     var products = await fetchProducts();
     var productContainer = document.getElementById('product-container');
-
+    console.log(products[0])
     products.forEach(product => {
         var productCard = document.createElement('div');
         productCard.classList.add('box');
@@ -31,8 +31,8 @@ async function displayProducts() {
             <img src="${product.thumbnail}" alt="${product.title}">
             <h4>${product.title}</h4>
             <h3>Price: ${product.price} EGP</h3>
-            <div class="icons" id="addcart">
-                <a href="#"><i class='bx bxs-cart-add'></i></a>
+            <div onClick="addToCart(${product.id})" class="icons" id="addcart">
+                <i class='bx bxs-cart-add'></i>
             </div>
         `;
 
@@ -55,4 +55,35 @@ function searchProducts() {
             card.style.display = 'none';   
         }
     });
+}
+
+
+
+function addToCart(pId){
+    var cart=[]
+    //load cart from session storage
+    if(sessionStorage.getItem('cart')!=null)
+    cart = [...JSON.parse(sessionStorage.getItem('cart'))]
+    //add cart item to cart
+    let found=false;
+    let getItem=cart.forEach((cartItem)=>{
+        if(pId==cartItem.id){
+            cartItem['quantity']+=1
+            found=true
+        }
+    })
+    if(!found){
+        cart.push({
+        'id':pId,
+        'quantity':1
+    })
+
+    }
+    //update cart in session
+    sessionStorage.setItem('cart',JSON.stringify(cart));
+    console.log(sessionStorage.getItem('cart'));
+
+    //make label with cart items
+    let label=document.querySelector('.cart-item-n')
+    label.innerHTML=cart.length
 }

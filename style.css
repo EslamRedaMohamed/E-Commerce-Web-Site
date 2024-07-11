@@ -9,6 +9,13 @@
     padding: 0;
 }
 
+.cart-item-n{
+    background: black;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
 h1 {
 
     text-align: center;
