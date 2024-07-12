@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El souq</title>
+    <link rel="stylesheet" type="text/css" href="account list.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <a href="#" class="logo"> 
+                    <i class='bx bx-shopping-bag'>Elsouq</i>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">
+                    <i class='bx bx-search'></i>
+                </button>
+            </div>
+            <div class="icons">
+                <a href="#">
+                    <i class='bx bxs-user-account' id="account">Account
+                        <ul id="account-list">
+                            <li data-url="login page.html">Login</li>
+                            <li data-url="register page.html">Sign Up</li>
+                            <li data-url="seller register page.html">Seller Registration</li>                            
+                        </ul>
+                    </i>
+                </a>
+                <a href="#" >
+                    <i class='bx bxs-user-account' id="category">Category
+                        <ul id="category-list">
+                            <li data-url="beauty.html" data-cat="beauty">Beauty</li>
+                            <li data-url="fragrances.html" data-cat="fragrances">Fragrances</li>
+                            <li data-url="furniture.html" data-cat="furniture">Furniture</li>
+                            <li data-url="groceries.html" data-cat="groceries">Groceries</li>
+                        </ul>
+                </i>   
+                </a>
+                <a href="#">
+                    <i class='bx bx-help-circle' >Help  </i>
+                </a>
+                <a href="#">
+                    <i class='bx bx-cart-alt'>Cart</i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- shoping items -->
+    <section class="slider-sec">
+        <div class="slider">
+            <div class="slide"><div class="overlay">
+        Show more
+    </div></div>
+            <div class="slide"><div class="overlay">
+        Show more
+    </div></div>
+            <div class="slide"><div class="overlay">
+        Show more
+    </div></div>
+            <div class="slide"><div class="overlay">
+        Show more
+    </div></div>
+        </div>
+    </section>
+    <section class="shop" id="shop">
+        <div class="container" id="product-container">
+            <!-- Product cards will be inserted here -->
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="About">
+        <div class="about-contact">
+            <h2>About</h2>
+            <p>
+                El Souq is an innovative e-commerce application offering a seamless shopping experience 
+                with a wide variety of products,user-friendly interface,secure payment options,and fast 
+                            delivery services, catering to diverse customer needs.
+            </p>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact" id="Contact">
+        <div class="main-contact">
+            <div class="contact-content">
+            <li><a href="#Shop">Shop</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Faq">Faq</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            </div>
+            <div class="contact-content">
+                <li><a href="#">Shiping </a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Site Policy</a></li>
+                <li><a href="#">Payment Methods</a></li>
+            </div>
+
+            <div class="contact-content">
+                <li><a href="#"><i class='bx bxs-phone'></i>Contact </a></li>
+                <li><a href="#">02-2233435</a></li>
+            </div>
+
+            <div class="contact-content">
+                <li><a href="#">Facebook <i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href="#">Instgram <i class='bx bxl-instagram-alt' ></i></a></li>
+                <li><a href="#">Linked in <i class='bx bxl-linkedin-square' ></i></a></li>
+            </div>
+        </div>
+        <div class="action">
+            <form>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="submit" name="submit" value="submit" required>
+
+            </form>
+        </div>
+    </section>
+    <hr>
+    <div class="copyright">
+        <p>&copy; 2024 El Souq. All rights reserved. Developed by EFK Team.</p>
+    </div>
+
+    <script src="account list.js"></script>
+</body>
+</html>
