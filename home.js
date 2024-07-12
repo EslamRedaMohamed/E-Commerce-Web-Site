@@ -1,46 +1,30 @@
+import products from "./products.js";
 
-// Get products data from API with Error handling
-async function fetchProducts() {
-    try {
-        var response = await fetch('https://dummyjson.com/products');
-        var data = await response.json();
-        return data.products;
-    } catch (error) {
-        console.error('Error fetching products:', error);
-    }
-    finally{
-        console.log("Data Fetched");
-    }
-}
-
-// print All products in console for Test
-console.log(fetchProducts())
+let searchbtn = document.querySelector(".search-bar button")
+searchbtn.addEventListener('click', searchProducts)
 
 
-// Display every Product thumbnail and title in HTML using DOM
+var productContainer = document.getElementById('product-container');
+let productList = [...products]
 
-async function displayProducts() {
-    var products = await fetchProducts();
-    var productContainer = document.getElementById('product-container');
-    console.log(products[0])
-    products.forEach(product => {
-        var productCard = document.createElement('div');
-        productCard.classList.add('box');
+productList.forEach(product => {
+    var productCard = document.createElement('div');
+    productCard.classList.add('box');
 
-        productCard.innerHTML = `
+    productCard.innerHTML =
+        `
             <img src="${product.thumbnail}" alt="${product.title}">
             <h4>${product.title}</h4>
             <h3>Price: ${product.price} EGP</h3>
-            <div onClick="addToCart(${product.id})" class="icons" id="addcart">
+            <div  class="icons addcart">
                 <i class='bx bxs-cart-add'></i>
             </div>
         `;
+        //getting add cart button from product card and add on click event 
+    productCard.querySelector('.addcart').addEventListener('click', () => { addToCart(product.id) })
 
-        productContainer.appendChild(productCard);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', displayProducts);
+    productContainer.appendChild(productCard);
+});
 
 // Function to filter products based on search input
 function searchProducts() {
@@ -52,38 +36,37 @@ function searchProducts() {
         if (title.includes(searchTerm)) {
             card.style.display = 'block';
         } else {
-            card.style.display = 'none';   
+            card.style.display = 'none';
         }
     });
 }
 
-
-
-function addToCart(pId){
-    var cart=[]
+//function to init cart details and update in session storage
+function addToCart(pId) {
+    var cart = []
     //load cart from session storage
-    if(sessionStorage.getItem('cart')!=null)
-    cart = [...JSON.parse(sessionStorage.getItem('cart'))]
+    if (sessionStorage.getItem('cart') != null)
+        cart = [...JSON.parse(sessionStorage.getItem('cart'))]
     //add cart item to cart
-    let found=false;
-    let getItem=cart.forEach((cartItem)=>{
-        if(pId==cartItem.id){
-            cartItem['quantity']+=1
-            found=true
+    let found = false;
+    let getItem = cart.forEach((cartItem) => {
+        if (pId == cartItem.id) {
+            cartItem['quantity'] += 1
+            found = true
         }
     })
-    if(!found){
+    if (!found) {
         cart.push({
-        'id':pId,
-        'quantity':1
-    })
+            'id': pId,
+            'quantity': 1
+        })
 
     }
     //update cart in session
-    sessionStorage.setItem('cart',JSON.stringify(cart));
+    sessionStorage.setItem('cart', JSON.stringify(cart));
     console.log(sessionStorage.getItem('cart'));
 
     //make label with cart items
-    let label=document.querySelector('.cart-item-n')
-    label.innerHTML=cart.length
+    let label = document.querySelector('.cart-item-n')
+    label.innerHTML = cart.length
 }
