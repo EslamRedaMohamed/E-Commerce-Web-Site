@@ -1,14 +1,7 @@
+import { fetchProductById,addToCart,searchProducts } from "./fetchProducts.js";
 
-
-async function fetchProductById(id) {
-    try {
-        var response = await fetch(`https://dummyjson.com/products/${id}`);
-        var data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error fetching product:', error);
-    }
-}
+let searchbtn = document.querySelector(".search-bar button")
+searchbtn.addEventListener('click', searchProducts)
 
 
 
@@ -22,10 +15,9 @@ console.log(fetchProductById(getProductIdFromURL()))
 
 
 
-async function displayProductDetails() {
     var productId = getProductIdFromURL();
     var product = await fetchProductById(productId);
-    var discountedPrice = product.price-Math.round(product.price*product.discountPercentage/100);
+    var discountedPrice = Math.round(product.price-product.price*product.discountPercentage/100)-0.01;
 
     document.getElementById('product-image').src = product.thumbnail;
     document.getElementById('product-title').textContent = product.title;
@@ -34,6 +26,27 @@ async function displayProductDetails() {
     document.getElementById('product-price').textContent = `Price: ${discountedPrice} EGP`;
     document.getElementById('old-price').textContent = `Price: ${product.price} EGP`;
     document.getElementById('discoutPercentage').textContent = `-${product.discountPercentage}%`;
+
+
+
+    if(product.stock > 0){
+        document.getElementById('product-stock').textContent = 'In Stock'
+    }else{
+        document.getElementById('product-stock').textContent = 'Out Of Stock'
+    }
+
+    
+    var ratingHtml = '';
+    for (let i = 0; i < 5; i++) {
+        if (i < product.rating) {
+            ratingHtml += '<i class="bx bxs-star"></i>';
+        } else {
+            ratingHtml += '<i class="bx bx-star"></i>';
+        }
+    }
+    document.getElementById('product-rating').innerHTML = ratingHtml;
+
+
 
     function displayProductReviews(reviews) {
         var reviewsContainer = document.getElementById('product-reviews');
@@ -65,25 +78,5 @@ async function displayProductDetails() {
 
     displayProductReviews(product.reviews);
 
-
-
-
-    if(product.stock > 0){
-        document.getElementById('product-stock').textContent = 'In Stock'
-    }else{
-        document.getElementById('product-stock').textContent = 'Out Of Stock'
-    }
-
-    
-    var ratingHtml = '';
-    for (let i = 0; i < 5; i++) {
-        if (i < product.rating) {
-            ratingHtml += '<i class="bx bxs-star"></i>';
-        } else {
-            ratingHtml += '<i class="bx bx-star"></i>';
-        }
-    }
-    document.getElementById('product-rating').innerHTML = ratingHtml;
-}
-
-document.addEventListener('DOMContentLoaded', displayProductDetails);
+var addCartBtn = document.getElementById('add-to-cart');
+addCartBtn.addEventListener('click', () => {addToCart(productId) })
