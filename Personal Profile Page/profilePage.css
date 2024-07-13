@@ -160,3 +160,20 @@ body{
         padding-left: 1rem;
     }
 }
+#logout{
+    float: right;
+    margin: 20px;
+    padding: 10px;
+    border: none;
+    background-color: var(--header-color);
+    color: var(--background-color); 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#logout:hover {
+    opacity: 0.8;
+}

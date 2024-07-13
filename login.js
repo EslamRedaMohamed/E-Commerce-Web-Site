@@ -1,19 +1,18 @@
 
 console.log('from login');
-import users from './users.js' 
+import allUsers from './users.js';
 const d = new Date();
 const login=function(username,pass){
 	// check user credentials
-	let user=users.find((userf)=>userf.name==username && userf.pass==pass)
+	let user=allUsers.find((userf) => userf.user_name == username && userf.password == pass);
 	// calculate expire time
 	
-    d.setTime(d.getTime() + (2* 60 * 1000));//expire after 2 minutes
+    d.setTime(d.getTime() + (5* 60 * 1000));//expire after 5 minutes(logout after 5 minutes)
     let expires = "expires="+d.toUTCString();
 
 	if(user!=undefined){
+		// setting user object in cookie
 		document.cookie = `user=${JSON.stringify(user)};${expires};path=/`;
-		console.log(user+" logged in");
-		console.log(document.cookie);
 		window.location='./home.html'
 	}
 	else{
@@ -21,7 +20,9 @@ const login=function(username,pass){
 	}
 	
 }
+// clear cookie for logout
 const logout=function(){
+	// set expire date to past to clear cookie
 	document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 const getLogged=function () {
@@ -40,7 +41,6 @@ const getLogged=function () {
   }
 export default login
 export {logout,getLogged}
-
 
 
 

@@ -6,6 +6,6 @@ loginBtn.addEventListener('click', () => {
     let user = document.getElementById("user-name").value
     let pass = document.getElementById('password').value
     let loginNow=login(user,pass)
-    console.log(loginNow);
+    // if user or pass invalid set label to error message
     loginBtn.previousSibling.textContent=loginNow
 })

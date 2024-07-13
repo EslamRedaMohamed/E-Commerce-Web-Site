@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "full_name": "John Doe",
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "phone": "1234567890",
+      "gender": "Male"
+    },
+    {
+      "id": "2",
+      "full_name": "Jane Smith",
+      "username": "janesmith",
+      "email": "janesmith@example.com",
+      "phone": "0987654321",
+      "gender": "Female"
+    },
+    {
+      "id": "3c1e",
+      "full_name": "Eslam",
+      "user_name": "Reda",
+      "password": "123@Eslam",
+      "email": "eslamreda.info@gmail.com",
+      "phone": "01123442408",
+      "gender": "Male"
+    },
+    {
+      "id": "a376",
+      "full_name": "fady",
+      "user_name": "fady2000",
+      "password": "123@Fady",
+      "email": "fady@gmail.com",
+      "phone": "01111111111",
+      "gender": "Male"
+    },
+    {
+      "id": "ca25",
+      "full_name": "kareem",
+      "user_name": "kareem2000",
+      "password": "123@kareem",
+      "email": "kareem@gmail.com",
+      "phone": "01111111111",
+      "gender": "Male"
+    },
+    {
+      "id": "3aac",
+      "full_name": "ahmed sayed",
+      "user_name": "ahmed2000",
+      "password": "123@ahmed",
+      "email": "ahmed@gmail.com",
+      "phone": "01111111111",
+      "gender": "Male"
+    },
+    {
+      "id": "c2f7",
+      "full_name": "kareem morsy",
+      "user_name": "kareem",
+      "password": "Hello1234_",
+      "email": "kareem@gmail.com",
+      "phone": "01022310954",
+      "gender": "Male"
+    }
+  ]
+}
