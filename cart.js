@@ -1,5 +1,13 @@
 import products from "./fetchProducts.js";
 
+import { getLogged } from "./login.js";
+
+// check from cookie if user logged in or not
+let isLoggedIn = getLogged()!=null
+if(isLoggedIn){
+    let account=document.getElementById('account')
+    account.setAttribute('href','profilePage.html')
+}
 
 console.log("geting " + products)
 

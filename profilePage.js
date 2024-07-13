@@ -1,4 +1,4 @@
-import { getLogged, logout } from "../login.js";
+import { getLogged, logout } from "./login.js";
 
 
 // Select elements
@@ -12,7 +12,7 @@ var logoutButton=document.getElementById('logout')
 
 logoutButton.addEventListener('click',()=>{
     logout()
-    window.location='../home.html'
+    window.location='home.html'
 })
 
 // get user from cookie
@@ -28,9 +28,3 @@ userName.innerHTML=user['user_name']
 userEmail.innerHTML=user['email']
 userPhone.innerHTML=user['phone']
 userGender.innerHTML=user['gender']
-
-
-
-
-
-

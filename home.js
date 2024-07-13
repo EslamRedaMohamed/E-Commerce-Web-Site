@@ -6,7 +6,7 @@ import { getLogged } from "./login.js";
 let isLoggedIn = getLogged()!=null
 if(isLoggedIn){
     let account=document.getElementById('account')
-    account.setAttribute('href','./Personal Profile Page/profilePage.html')
+    account.setAttribute('href','profilePage.html')
 }
 
 

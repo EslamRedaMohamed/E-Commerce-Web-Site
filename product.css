@@ -86,10 +86,9 @@ header {
     opacity: 0.6;
 }
 
-
-
 .product-details .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
     margin: 50px auto;
@@ -107,6 +106,7 @@ header {
     flex: 1;
     max-width: 50%;
 }
+
 .product-info h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
@@ -117,16 +117,17 @@ header {
     margin-bottom: 5px;
     justify-content: space-between;
 }
-.discount{
+
+.discount {
     display: flex;
 }
 
-#old-price{
+#old-price {
     text-decoration: line-through;
     opacity: 0.5;
 }
 
-#discoutPercentage{
+#discoutPercentage {
     color: var(--footer-color);
     background: rgb(238, 210, 200);
     display: inline;
@@ -185,11 +186,11 @@ header {
     font-size: 1rem;
     line-height: 1.4;
 }
-#user-name{
+
+#user-name {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--footer-color);
-
 }
 
 .review p strong {
@@ -198,7 +199,6 @@ header {
 }
 
 /* footer */
-
 .contact {
     padding: 80px 17%;
     background: var(--footer-color);
@@ -262,29 +262,88 @@ header {
     background: var(--footer-color);
 }
 
-/* responsive */
+/* responsive styles */
+@media (max-width: 1024px) {
+    .search-bar input {
+        width: 25rem;
+        margin-right: 20px;
+    }
+
+    #add-to-cart {
+        padding: 1rem 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-bar input {
+        width: 18rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar, .icons {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .product-details .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-info {
+        max-width: 100%;
+    }
+
+    #add-to-cart {
+        padding: 1rem 5rem;
+    }
+}
+
 @media (max-width: 480px) {
-    .carousel-section {
-        padding-top: 5rem;
+    .search-bar input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
-    .container {
-        padding: 5px;
+    header {
+        padding: 15px 5%;
     }
 
-    .about {
-        padding: 10px;
+    .search-bar, .icons {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .about-contact h2 {
-        font-size: 1.2rem;
+    .product-info h1 {
+        font-size: 1.8rem;
     }
 
-    .about-contact p {
-        font-size: 0.9rem;
+    .product-info h2 {
+        font-size: 1.4rem;
     }
 
-    .contact {
-        padding: 20px
+    #add-to-cart {
+        padding: 1rem 3rem;
+    }
+
+    .main-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .action form input[type="email"], .action form input[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
     }
 }

@@ -20,7 +20,7 @@ radios.forEach((radio) => {
         if(radio.checked){
             userGeneder = radio.value
         } 
-      })
+    })
     })
 var registerBtn = formInputs[8]
 var invalidInputs = document.getElementById("invalid")
@@ -193,8 +193,3 @@ registerBtn.addEventListener("click", function(event) {
         });
     }
 });
-
-
-
-
-

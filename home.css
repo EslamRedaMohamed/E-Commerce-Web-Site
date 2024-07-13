@@ -95,7 +95,7 @@ header {
 section.carousel-section {
     max-width: 90%; 
     margin: 0 auto;  
-    padding-top: 6.5rem; 
+    padding-top: 9rem; 
     position: relative;
     overflow: hidden;
     height: calc(50vh - 10px);
