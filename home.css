@@ -88,13 +88,65 @@ header {
 .icons i:hover {
     opacity: 0.6;
 }
+/* Slider section                                         */
+
+
+/* Custom CSS to limit the carousel's impact */
+section.carousel-section {
+    max-width: 80%; 
+    margin: 0 auto;  
+    padding-top: 6.5rem; 
+    position: relative;
+    overflow: hidden;
+    height: calc(50vh - 10px);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: content-box;
+}
+
+.carousel-item img {
+    height: 100%; 
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: var(--background-color);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+/*end of slider*/
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 0.5rem;
 }
+
 
 .box {
     background: var(--background-color); /* White background for boxes */

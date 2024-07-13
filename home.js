@@ -33,3 +33,58 @@ productList.forEach(product => {
         productCard.querySelector('.addcart').addEventListener('click', () => { addToCart(product.id) });
         productContainer.appendChild(productCard);
     });
+
+
+// slider
+var currentIndex = 0;
+var autoSlideInterval;
+var slideIntervalTime = 5000; 
+var userSlideTimeout = 5000; 
+
+function showSlide(index) {
+    var slides = document.querySelectorAll('.carousel-item');
+    var totalSlides = slides.length;
+
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    var offset = -currentIndex * 100;
+    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+    resetAutoSlide();
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+    resetAutoSlide();
+}
+
+function autoSlide() {
+    autoSlideInterval = setInterval(() => {
+        nextSlide();
+    }, slideIntervalTime);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    setTimeout(() => {
+        autoSlide();
+    }, userSlideTimeout);
+}
+
+// Initialize the slider
+showSlide(currentIndex);
+autoSlide();
+
+// Event listeners for manual slide control
+document.querySelector('.carousel-control.prev').addEventListener('click', prevSlide);
+document.querySelector('.carousel-control.next').addEventListener('click', nextSlide);
+
