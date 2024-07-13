@@ -1,72 +1,35 @@
-import products from "./products.js";
+import products from "./fetchProducts.js";
+import { addToCart,searchProducts } from "./fetchProducts.js";
 
 let searchbtn = document.querySelector(".search-bar button")
 searchbtn.addEventListener('click', searchProducts)
 
-
 var productContainer = document.getElementById('product-container');
 let productList = [...products]
 
+
+
+// Display every Product thumbnail and title in HTML using DOM
+
 productList.forEach(product => {
-    var productCard = document.createElement('div');
-    productCard.classList.add('box');
+    var discountedPrice = Math.round(product.price-product.price*product.discountPercentage/100)-0.01;
+        var productCard = document.createElement('div');
+        productCard.classList.add('box');
 
-    productCard.innerHTML =
-        `
-            <img src="${product.thumbnail}" alt="${product.title}">
-            <h4>${product.title}</h4>
-            <h3>Price: ${product.price} EGP</h3>
-            <div  class="icons addcart">
-                <i class='bx bxs-cart-add'></i>
-            </div>
+        productCard.innerHTML = `
+                <a href="product.html?id=${product.id}">
+                            <img src="${product.thumbnail}" alt="${product.title}">
+                            <h4>${product.title}</h4>
+                            <h3>Price: ${discountedPrice} EGP</h3>
+                            <div class="discount">
+                            <p  id="old-price">Price: ${product.price} EGP</p>
+                            <p id="discoutPercentage">-${product.discountPercentage}%</p>
+                            </div>   
+                </a>
+                <div  class="icons addcart">
+                                <i class='bx bxs-cart-add'></i>
+                </div>
         `;
-        //getting add cart button from product card and add on click event 
-    productCard.querySelector('.addcart').addEventListener('click', () => { addToCart(product.id) })
-
-    productContainer.appendChild(productCard);
-});
-
-// Function to filter products based on search input
-function searchProducts() {
-    var searchTerm = document.getElementById('search-input').value.trim().toLowerCase();
-    var productCards = document.querySelectorAll('.box');
-
-    productCards.forEach(card => {
-        var title = card.querySelector('h4').textContent.toLowerCase();
-        if (title.includes(searchTerm)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
+        productCard.querySelector('.addcart').addEventListener('click', () => { addToCart(product.id) });
+        productContainer.appendChild(productCard);
     });
-}
-
-//function to init cart details and update in session storage
-function addToCart(pId) {
-    var cart = []
-    //load cart from session storage
-    if (sessionStorage.getItem('cart') != null)
-        cart = [...JSON.parse(sessionStorage.getItem('cart'))]
-    //add cart item to cart
-    let found = false;
-    let getItem = cart.forEach((cartItem) => {
-        if (pId == cartItem.id) {
-            cartItem['quantity'] += 1
-            found = true
-        }
-    })
-    if (!found) {
-        cart.push({
-            'id': pId,
-            'quantity': 1
-        })
-
-    }
-    //update cart in session
-    sessionStorage.setItem('cart', JSON.stringify(cart));
-    console.log(sessionStorage.getItem('cart'));
-
-    //make label with cart items
-    let label = document.querySelector('.cart-item-n')
-    label.innerHTML = cart.length
-}

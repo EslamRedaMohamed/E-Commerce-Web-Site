@@ -17,19 +17,21 @@
     <!-- header -->
     <header>
         <div>
-            <a href="#" class="logo"> <i class='bx bx-shopping-bag' ></i>El souq</a>
+            <a href="home.html" class="logo"> <i class='bx bx-shopping-bag' ></i>El souq</a>
         </div>
         <div class="search-bar">
             <input type="text" id="search-input"  placeholder="Search product...">
-            <button type="button" ><i class='bx bx-search'></i></button>
+            <button type="button"><i class='bx bx-search'></i></button>
         </div>
         <div class="icons">
-            <a href="#"><i class='bx bxs-user-account'>Account</i></a>
+            <a href="filter page.html"><i class='bx bx-category-alt'>Category</i></a>
+            <a href="login.html"><i class='bx bx-user'>Account</i></a>
             <a href="#"><i class='bx bx-help-circle' >Help</i></a>
-            <a href="./cart.html"><i class='bx bx-cart-alt'>Cart</i><span class="cart-item-n"></span></a>
+            <a href="cart.html">
+                <i class='bx bx-cart-alt'>Cart</i>
+                <span id="cart-item-n"></span></a>
         </div>
     </header>
-
     <!-- shoping items -->
     
     <section class="shop" id="shop">
@@ -88,8 +90,7 @@
     <hr>
     <div class="copyright">
         <p>&copy; 2024 El Souq. All rights reserved. Developed by EFK Team.</p>
-    </div>
-
+    </div>    
     <script type="module" src="home.js"></script>
 </body>
 </html>

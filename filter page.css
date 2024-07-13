@@ -74,20 +74,114 @@ header {
 }
 
 .icons {
-    display: flex;
-    align-items: center;
+    display: inline-block;
 }
 
 .icons i {
     color: var(--background-color); /* White icons */
     font-size: 24px;
     margin-left: 15px;
-    
 }
 
 .icons i:hover {
     opacity: 0.6;
 }
+
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 6.5rem;
+    margin-bottom: 2rem;
+}
+
+.side {
+    background: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 2rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--header-color);
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.form-label {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    display: inline;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-around;
+    outline: none;
+}
+
+.input-group input {
+    width: 48%;
+    border: 1px solid var(--header-color);
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    outline: none;
+    font-size: var(--p-font);
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--footer-color);
+    border-radius: 5px;
+    outline: none;
+    font-size: var(--p-font);
+    position: relative; /* Ensure the dropdown is positioned correctly */
+    z-index: 1; /* Ensure the dropdown appears above other elements */
+}
+
+.form-check {
+    display: block;
+    margin-bottom: 0.5rem;
+    outline: none;
+}
+
+.form-check-input {
+    margin-right: 0.5rem;
+}
+
+.form-check-label {
+    font-size: var(--p-font);
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--p-font);
+}
+
+.btn-primary {
+    background-color: var(--header-color);
+    color: var(--background-color);
+}
+
+/* Grid container for the main content */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -97,7 +191,7 @@ header {
 }
 
 .box {
-    background: var(--background-color); /* White background for boxes */
+    background: var(--background-color);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -116,20 +210,12 @@ header {
 .box img {
     width: 100%;
     height: auto;
-    border-bottom: 4px solid var(--header-color); /* Modern orange border */
+    border-bottom: 4px solid var(--header-color);
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
-.box h4 {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    padding: 10px;
-    text-align: center;
-}
-
-.box h3 {
-    font-size: 1rem;
+.box h4, .box h3 {
     color: var(--text-color);
     padding: 10px;
     text-align: center;
@@ -138,14 +224,6 @@ header {
     color: var(--header-color);
 }
 
-.about {
-    background: rgb(233, 143, 110); /* Light teal background */
-    color: var(--footer-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 .discount{
     display: flex;
     justify-content: center;
@@ -160,25 +238,6 @@ header {
     color: var(--text-color);
     background: rgb(238, 210, 200);
     display: inline;
-}
-
-.about-contact {
-    text-align: center;
-}
-
-.about-contact h2 {
-    font-size: var(--main-font);
-    margin-bottom: 30px;
-    color: var(--text-color);
-}
-
-.about-contact p {
-    max-width: 900px;
-    font-size: var(--p-font);
-    font-weight: 600;
-    color: var(--text-color);
-    line-height: 30px;
-    display: block;
 }
 
 .contact {
@@ -202,7 +261,7 @@ header {
     color: var(--text-color);
     font-size: var(--p-font);
     font-weight: 600;
-    transition: all .40s ease;
+    transition: all 0.4s ease;
 }
 
 .contact-content li a:hover {
@@ -242,47 +301,4 @@ header {
     text-align: center;
     padding: 17px;
     background: var(--footer-color);
-}
-
-/* Responsive Styles */
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    .search-bar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .icons {
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 10px;
-    }
-
-    .icons a {
-        margin-left: 0;
-        margin-right: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 15px 5%;
-    }
-
-    .search-bar input,
-    .search-bar button {
-        font-size: 14px;
-    }
-
-    .icons a {
-        font-size: 18px;
-    }
 }
