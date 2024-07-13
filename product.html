@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/bx-shopping-bag.svg" type="image/icon type">
-    <title>El souq</title>
-    <link rel="stylesheet" type="text/css" href="home.css" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="product.css">
+    <title>Product</title>
 </head>
 <body>
-    <!-- header -->
+
     <header>
         <div>
             <a href="home.html" class="logo"> <i class='bx bx-shopping-bag' ></i>El souq</a>
@@ -25,31 +23,39 @@
         </div>
         <div class="icons">
             <a href="#"><i class='bx bx-category-alt'>Category</i></a>
-            <a href="#"><i class='bx bx-user'>Account</i></a>
+            <a href="#"><i class='bx bxs-user-account'>Account</i></a>
             <a href="#"><i class='bx bx-help-circle' >Help</i></a>
             <a href="#"><i class='bx bx-cart-alt'>Cart</i></a>
         </div>
     </header>
-    <!-- shoping items -->
-    
-    <section class="shop" id="shop">
-        <div class="container" id="product-container">
-            <!-- Product cards will be inserted here -->
 
+    <section class="product-details" id="product-details">
+        <div class="container">
+            <div class="product-image">
+                <img id="product-image" src="" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h1 id="product-title"></h1>
+                <h5 id="product-brand"></h5>
+                <p id="product-description"></p>
+                <h2 id="product-price"></h2>
+                <div class="discount">
+                    <p  id="old-price"></p>
+                    <p id="discoutPercentage"></p>
+                </div>
+                <h6 id="product-stock"></h6>
+                <div id="product-rating" class="rating"></div>
+                <button id="add-to-cart"><i class='bx bxs-cart-add'></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <h2>Customers Feedback</h2>
+        <div id="product-reviews">
+            <!-- Reviews will be dynamically added here -->
         </div>
     </section>
 
-    <!-- About -->
-    <section class="about" id="About">
-        <div class="about-contact">
-            <h2>About</h2>
-            <p>
-                El Souq is an innovative e-commerce application offering a seamless shopping experience 
-                with a wide variety of products,user-friendly interface,secure payment options,and fast 
-                            delivery services, catering to diverse customer needs.
-            </p>
-        </div>
-    </section>
+
     <!-- Contact -->
     <section class="contact" id="Contact">
         <div class="main-contact">
@@ -89,6 +95,8 @@
     <div class="copyright">
         <p>&copy; 2024 El Souq. All rights reserved. Developed by EFK Team.</p>
     </div>
-    <script src="home.js"></script>
+
+    
+    <script src="product.js"></script>
 </body>
 </html>
