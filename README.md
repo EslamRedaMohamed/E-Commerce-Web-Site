@@ -22,3 +22,19 @@ The E-Commerce App is designed to provide a seamless shopping experience. Users 
 - CSS  
 - JavaScript 
 
+## Features
+
+- **User Authentication and Profile Management:**
+  - Secure user login and registration.
+  - Profile page for managing user information.
+
+- **Product Search and Filtering:**
+  - Search products by name.
+  - Filter products by category.
+
+- **Dynamic Product Display with Discounts:**
+  - Display product details including title, price, and discount percentage.
+  - Show discounted price along with the original price.
+
+- **Shopping Cart Functionality:**
+  - Add products to the shopping
