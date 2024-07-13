@@ -51,6 +51,15 @@
       "email": "ahmed@gmail.com",
       "phone": "01111111111",
       "gender": "Male"
+    },
+    {
+      "id": "c2f7",
+      "full_name": "kareem morsy",
+      "user_name": "kareem",
+      "password": "Hello1234_",
+      "email": "kareem@gmail.com",
+      "phone": "01022310954",
+      "gender": "Male"
     }
   ]
 }

@@ -1,16 +1,11 @@
-import login from './login.js';
-
-let loginBtn = document.getElementById('login-btn');
+import login,{getLogged,logout} from './login.js'
+let loginBtn = document.getElementById('login-btn')
 
 loginBtn.addEventListener('click', () => {
-    let user = document.getElementById("user-name").value;
-    let pass = document.getElementById('password').value;
-    let result = login(user, pass);
     
-    if (result === undefined) {
-        alert('Invalid username or password');
-    } else {
-        alert(`Hello ${result.user_name}`);// Assuming 'name' is a property of the user object
-        // Redirect or perform other actions after successful login
-    }
-});
+    let user = document.getElementById("user-name").value
+    let pass = document.getElementById('password').value
+    let loginNow=login(user,pass)
+    // if user or pass invalid set label to error message
+    loginBtn.previousSibling.textContent=loginNow
+})
