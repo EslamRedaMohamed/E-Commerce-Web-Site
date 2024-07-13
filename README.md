@@ -21,6 +21,7 @@ The E-Commerce App is designed to provide a seamless shopping experience. Users 
 - HTML  
 - CSS  
 - JavaScript 
+- css3
 
 ## Features
 

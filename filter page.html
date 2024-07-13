@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El souq</title>
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="filter page.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="home.html" class="logo"> <i class='bx bx-shopping-bag' ></i>El souq</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input"  placeholder="Search product...">
+            <button type="button" onclick="searchProducts()"><i class='bx bx-search'></i></button>
+        </div>
+        <div class="icons">
+            <a href="filter page.html"><i class='bx bx-category-alt'>Category</i></a>
+            <a href="login.html" id="account"><i class='bx bx-user'>Account</i></a>
+            <a href="#"><i class='bx bx-help-circle' >Help</i></a>
+            <a href="cart.html">
+                <i class='bx bx-cart-alt'>Cart</i>
+                <span id="cart-item-n"></span></a>
+        </div>
+    </header>
+    <section class="filter-container" style="margin-top: 6.5rem; margin-bottom: 2rem;">
+        <div class="card mt-26 side " style="max-width: 220px;min-width: 220px; margin-left: 2rem;margin-bottom: 1rem;">
+            <div class="card-body">
+                <h5 class="card-title">Filter Products</h5>
+                <!-- Price Range -->
+                <div class="mb-3">
+                    <label for="priceFrom" class="form-label">Price Range</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="priceFrom" placeholder="Min">
+                        <input type="number" class="form-control" id="priceTo" placeholder="Max">
+                    </div>
+                </div>
+                <!-- Category -->
+                <div class="mb-3">
+                    <label for="category" class="form-label" onchange="categoryValue()">Category</label>
+                    <select class="form-select" id="category">
+                        <option value="all">Categories</option>
+                        <option value="beauty">Beauty</option>
+                        <option value="fragrances">Fragrances</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="groceries">Groceries</option>
+                        <option value="home-decoration">Home Decoration</option>
+                        <option value="kitchen-accessories">Kitchen Accessories</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="mens-shirts">Men's Shirts</option>
+                        <option value="mens-shoes">Men's Shoes</option>
+                        <option value="mens-watches">Men's Watches</option>
+                        <option value="mobile-accessories">Mobile Accessories</option>
+                        <option value="motorcycle">Motorcycle</option>
+                        <option value="skin-care">Skin Care</option>
+                        <option value="smartphones">Smartphones</option>
+                        <option value="sports-accessories">Sports Accessories</option>
+                        <option value="sunglasses">Sunglasses</option>
+                        <option value="tablets">Tablets</option>
+                        <option value="tops">Tops</option>
+                        <option value="vehicle">Vehicle</option>
+                        <option value="womens-bags">Women's Bags</option>
+                        <option value="womens-dresses">Women's Dresses</option>
+                        <option value="womens-jewellery">Women's Jewellery</option>
+                        <option value="womens-shoes">Women's Shoes</option>
+                        <option value="womens-watches">Women's Watches</option>
+                    </select>
+                </div>
+                
+                <!-- Rating -->
+                <div class="mb-3">
+                    <label class="form-label">Rating</label><br>
+                    <div class="form-check form-check-block">
+                        <input class="form-check-input" type="radio" name="rating" id="0">
+                        <label class="form-check-label" for="rating1">above 0</label>
+                    </div>
+                    <div class="form-check form-check-block">
+                        <input class="form-check-input" type="radio" name="rating" id="1">
+                        <label class="form-check-label" for="rating2">above 1</label>
+                    </div>
+                    <div class="form-check form-check-block">
+                        <input class="form-check-input" type="radio" name="rating" id="2">
+                        <label class="form-check-label" for="rating3">above 2</label>
+                    </div>
+                    <div class="form-check form-check-block">
+                        <input class="form-check-input" type="radio" name="rating" id="3">
+                        <label class="form-check-label" for="rating4">above 3</label>
+                    </div>
+                    <div class="form-check form-check-block">
+                        <input class="form-check-input" type="radio" name="rating" id="4">
+                        <label class="form-check-label" for="rating5">above 4</label>
+                    </div>
+                </div>
+                <!-- Offers -->
+                <div class="mb-3">
+                    <label class="form-label">Offers</label><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="offers">
+                        <label class="form-check-label" for="offers">Include Offers</label>
+                    </div>
+                </div>
+                <!-- Apply Filter Button -->
+                <button type="button" class="btn btn-primary">Apply Filter</button>
+            </div>
+        </div>
+        <div class="container" id="filtered-products">
+            
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="contact" id="Contact">
+        <div class="main-contact">
+            <div class="contact-content">
+            <li><a href="#Shop">Shop</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Faq">Faq</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            </div>
+            <div class="contact-content">
+                <li><a href="#">Shiping </a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Site Policy</a></li>
+                <li><a href="#">Payment Methods</a></li>
+            </div>
+
+            <div class="contact-content">
+                <li><a href="#"><i class='bx bxs-phone'></i>Contact </a></li>
+                <li><a href="#">02-2233435</a></li>
+            </div>
+
+            <div class="contact-content">
+                <li><a href="#">Facebook <i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href="#">Instgram <i class='bx bxl-instagram-alt' ></i></a></li>
+                <li><a href="#">Linked in <i class='bx bxl-linkedin-square' ></i></a></li>
+            </div>
+        </div>
+        <div class="action">
+            <form>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="submit" name="submit" value="submit" required>
+
+            </form>
+        </div>
+    </section>
+
+    <hr>
+    <div class="copyright">
+        <p>&copy; 2024 El Souq. All rights reserved. Developed by EFK Team.</p>
+    </div>
+
+    <script type="module" src="filter page.js"></script>
+</body>
+</html>

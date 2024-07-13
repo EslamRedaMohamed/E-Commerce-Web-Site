@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="product.css">
+    <title>Product</title>
+</head>
+<body>
+
+    <header>
+        <div>
+            <a href="home.html" class="logo"> <i class='bx bx-shopping-bag' ></i>El souq</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input"  placeholder="Search product...">
+            <button type="button"><i class='bx bx-search'></i></button>
+        </div>
+        <div class="icons">
+            <a href="filter page.html"><i class='bx bx-category-alt'>Category</i></a>
+            <a href="#"><i class='bx bxs-user-account'>Account</i></a>
+            <a href="#"><i class='bx bx-help-circle' >Help</i></a>
+            <a href="cart.html">
+                <i class='bx bx-cart-alt'>Cart</i>
+                <span id="cart-item-n"></span></a>
+        </div>
+    </header>
+
+    <section class="product-details" id="product-details">
+        <div class="container">
+            <div class="product-image">
+                <img id="product-image" src="" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h1 id="product-title"></h1>
+                <h5 id="product-brand"></h5>
+                <p id="product-description"></p>
+                <h2 id="product-price"></h2>
+                <div class="discount">
+                    <p  id="old-price"></p>
+                    <p id="discoutPercentage"></p>
+                </div>
+                <h6 id="product-stock"></h6>
+                <div id="product-rating" class="rating"></div>
+                <button id="add-to-cart"><i class='bx bxs-cart-add'></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <h2>Customers Feedback</h2>
+        <div id="product-reviews">
+            <!-- Reviews will be dynamically added here -->
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="Contact">
+        <div class="main-contact">
+            <div class="contact-content">
+            <li><a href="#Shop">Shop</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Faq">Faq</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            </div>
+            <div class="contact-content">
+                <li><a href="#">Shiping </a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Site Policy</a></li>
+                <li><a href="#">Payment Methods</a></li>
+            </div>
+
+            <div class="contact-content">
+                <li><a href="#"><i class='bx bxs-phone'></i>Contact </a></li>
+                <li><a href="#">02-2233435</a></li>
+            </div>
+
+            <div class="contact-content">
+                <li><a href="#">Facebook <i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href="#">Instgram <i class='bx bxl-instagram-alt' ></i></a></li>
+                <li><a href="#">Linked in <i class='bx bxl-linkedin-square' ></i></a></li>
+            </div>
+        </div>
+        <div class="action">
+            <form>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="submit" name="submit" value="submit" required>
+
+            </form>
+        </div>
+    </section>
+    <hr>
+    <div class="copyright">
+        <p>&copy; 2024 El Souq. All rights reserved. Developed by EFK Team.</p>
+    </div>
+    <script type="module" src="product.js"></script>
+</body>
+</html>
