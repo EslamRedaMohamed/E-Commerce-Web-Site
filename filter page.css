@@ -302,3 +302,107 @@ header {
     padding: 17px;
     background: var(--footer-color);
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+
+    .icons a {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .carousel-section {
+        height: auto;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .about-contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-contact p {
+        font-size: 1rem;
+    }
+
+    .contact {
+        padding: 40px 10%;
+    }
+
+    .main-contact {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-content li a {
+        font-size: 0.9rem;
+    }
+
+    .action form input[type="email"],
+    .action form input[type="submit"] {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-section {
+        padding-top: 5rem;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .about {
+        padding: 10px;
+    }
+
+    .about-contact h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-contact p {
+        font-size: 0.9rem;
+    }
+
+    .contact {
+        padding: 20px
+    }
+}

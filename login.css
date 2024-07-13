@@ -44,10 +44,14 @@ body {
 }
 
 #logo {
-    margin-bottom: 20px;
-    color: var(--background-color);
+    font-size: var(--p-font);
+    font-weight: 500;
     background: var(--header-color);
-    display: inline;
+    color: var(--background-color);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 .login-container h1 {
@@ -67,6 +71,7 @@ body {
     border: 2px solid var(--header-color);
     border-radius: 5px;
     font-size: var(--p-font);
+    outline: none;
 }
 
 .login-form button {

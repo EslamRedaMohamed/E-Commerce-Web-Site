@@ -159,23 +159,41 @@ userPasswdConfirm.addEventListener("blur", function(){
 
 
 
-registerBtn.addEventListener("click", function(event){
-    if(!(fullNameVal && userNameVal && userEmailVal && userPhoneNumberVal && userPasswdVal && userPasswdConfirmVal && userGeneder)){
-        event.preventDefault()      
-        invalidInputs.innerText = "Missing Inputs"
-        invalidInputs.style.color = "red"
-    }   
-    else{
-        userData = {
-            "full_name" : userName.value,
-            "user_name" : userName.value,
-            "password"  : userPasswd.value,
-            "email"     : userEmail.value,
-            "phone"     : userPhoneNumber.value
-        }
-        console.log("submitted succesfully")
+registerBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    if (!(fullNameVal && userNameVal && userEmailVal && userPhoneNumberVal && userPasswdVal && userPasswdConfirmVal && userGeneder)) {
+        invalidInputs.innerText = "Missing Inputs";
+        invalidInputs.style.color = "red";
+    } else {
+        let userData = {
+            full_name: fullName.value,
+            user_name: userName.value,
+            password: userPasswd.value,
+            email: userEmail.value,
+            phone: userPhoneNumber.value,
+            gender: userGeneder
+        };
+
+        fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            // Optionally reset form fields or show a success message
+            window.location.replace('login.html');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
-})
+});
+
 
 
 

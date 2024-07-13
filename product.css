@@ -261,3 +261,30 @@ header {
     padding: 17px;
     background: var(--footer-color);
 }
+
+/* responsive */
+@media (max-width: 480px) {
+    .carousel-section {
+        padding-top: 5rem;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .about {
+        padding: 10px;
+    }
+
+    .about-contact h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-contact p {
+        font-size: 0.9rem;
+    }
+
+    .contact {
+        padding: 20px
+    }
+}

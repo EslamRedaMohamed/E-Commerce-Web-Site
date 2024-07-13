@@ -1,24 +1,7 @@
-
-console.log('from login');
-import users from './users.js' 
-
-const login=function(user,pass){
-	console.log(users);
-	return users.find((userf)=>userf.name==user && userf.pass==pass)
-	
+import allUsers from './users.js';
+console.log("inlogin",allUsers)
+const login = function(user, pass) {
+    return allUsers.find((userf) => userf.user_name === user && userf.password === pass);
 }
-export default login
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default login;
