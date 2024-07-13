@@ -1,5 +1,14 @@
 import products from "./fetchProducts.js";
 import { addToCart,searchProducts } from "./fetchProducts.js";
+import { getLogged } from "./login.js";
+
+let isLoggedIn = getLogged()!=null
+console.log(getLogged());
+if(isLoggedIn){
+    let account=document.getElementById('account')
+    account.setAttribute('href','./Personal Profile Page/profilePage.html')
+}
+
 
 let searchbtn = document.querySelector(".search-bar button")
 searchbtn.addEventListener('click', searchProducts)
