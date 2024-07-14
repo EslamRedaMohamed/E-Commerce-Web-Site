@@ -78,6 +78,15 @@
       "email": "sife@gmile.com",
       "phone": "01000000000",
       "gender": "Male"
+    },
+    {
+      "id": "1e0f",
+      "full_name": "amr ali",
+      "user_name": "amr2000",
+      "password": "22222222",
+      "email": "amr@gmail.com",
+      "phone": "01222222222",
+      "gender": "Male"
     }
   ]
 }

@@ -12,7 +12,7 @@ const login=function(username,pass){
 	if(user!=undefined){
 		// setting user object in cookie
 		document.cookie = `user=${JSON.stringify(user)};${expires};path=/`;
-		window.location='./home.html'
+		window.location='index.html'
 	}
 	else{
 		return "invalid user or pass"

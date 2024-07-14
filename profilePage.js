@@ -12,7 +12,7 @@ var logoutButton=document.getElementById('logout')
 
 logoutButton.addEventListener('click',()=>{
     logout()
-    window.location='home.html'
+    window.location='index.html'
 })
 
 // get user from cookie
