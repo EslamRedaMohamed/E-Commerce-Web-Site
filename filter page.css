@@ -27,8 +27,6 @@ header {
     width: 100%;
     top: 0;
     right: 0;
-    z-index: 1000;
-    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,18 +72,25 @@ header {
 }
 
 .icons {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
 }
 
-.icons i {
+.icons a {
+    display: flex;
+    align-items: center;
     color: var(--background-color); /* White icons */
     font-size: 24px;
     margin-left: 15px;
+    text-decoration: none;
 }
 
-.icons i:hover {
+.icons a:hover {
     opacity: 0.6;
 }
+
+
 
 .filter-container {
     display: flex;
@@ -405,4 +410,8 @@ header {
     .contact {
         padding: 20px
     }
+    .icons a {
+        font-size: 18px;
+        margin: 3px;
+    }  
 }
