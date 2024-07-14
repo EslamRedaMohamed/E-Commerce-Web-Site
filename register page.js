@@ -175,7 +175,7 @@ registerBtn.addEventListener("click", function(event) {
             gender: userGeneder
         };
 
-        fetch('http://localhost:3000/users', {
+        fetch('https://my-json-server.typicode.com/EslamRedaMohamed/Elsouq-json-server/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

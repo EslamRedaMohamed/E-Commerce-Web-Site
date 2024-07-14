@@ -17,15 +17,14 @@ const allUsers =await fetchUsers();
 
 async function fetchUsers() {
     try {
-        var response = await fetch('http://localhost:3000/users');
+        var response = await fetch('https://my-json-server.typicode.com/EslamRedaMohamed/Elsouq-json-server/users');
         var data = await response.json();
         return data;
     } catch (error) {
         console.error('Error fetching users:', error);
-    }
-    finally{
-        console.log("users Fetched");
+    } finally {
+        console.log("Users Fetched");
     }
 }
-
+console.log(allUsers)
 export default allUsers;
