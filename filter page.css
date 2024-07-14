@@ -325,7 +325,6 @@ header {
         margin-right: 10px;
     }
 
-    
     .icons {
         margin-top: 10px;
         justify-content: center;
@@ -335,16 +334,7 @@ header {
         margin: 5px;
         font-size: 20px;
     }
-
-    .carousel-section {
-        height: auto;
-    }
-
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-
+    
     .container {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -355,65 +345,48 @@ header {
         padding: 10px;
     }
 
-    .about {
-        padding: 20px;
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .about-contact h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-contact p {
-        font-size: 1rem;
-    }
-
-    .contact {
-        padding: 40px 10%;
-    }
-
-    .main-contact {
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .contact-content li a {
-        font-size: 0.9rem;
-    }
-
-    .action form input[type="email"],
-    .action form input[type="submit"] {
+    .side {
         width: 100%;
-        font-size: 14px;
-        padding: 8px 10px;
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .carousel-section {
-        padding-top: 5rem;
-    }
-
-    .container {
-        padding: 5px;
-    }
-
-    .about {
-        padding: 10px;
-    }
-
-    .about-contact h2 {
-        font-size: 1.2rem;
-    }
-
-    .about-contact p {
-        font-size: 0.9rem;
-    }
-
-    .contact {
-        padding: 20px
-    }
     .icons a {
         font-size: 18px;
         margin: 3px;
     }  
+    
+    .container {
+        padding: 5px;
+    }
+
+    .main-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .action form input[type="email"], .action form input[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .filter-container {
+        margin-top: 2rem;
+    }
+
+    .box {
+        padding: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .side {
+        padding: 10px;
+    }
 }

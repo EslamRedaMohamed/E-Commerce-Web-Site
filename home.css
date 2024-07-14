@@ -27,6 +27,8 @@ header {
     width: 100%;
     top: 0;
     right: 0;
+    z-index: 1000;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -342,41 +344,13 @@ section.carousel-section {
     .box {
         padding: 10px;
     }
-
-    .about {
-        padding: 20px;
-    }
-
-    .about-contact h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-contact p {
-        font-size: 1rem;
-    }
-
-    .contact {
-        padding: 40px 10%;
-    }
-
-    .main-contact {
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .contact-content li a {
-        font-size: 0.9rem;
-    }
-
-    .action form input[type="email"],
-    .action form input[type="submit"] {
-        width: 100%;
-        font-size: 14px;
-        padding: 8px 10px;
-    }
 }
 
 @media (max-width: 480px) {
+    .icons a {
+        font-size: 18px;
+        margin: 3px;
+    }  
     .carousel-section {
         padding-top: 5rem;
     }
@@ -384,25 +358,12 @@ section.carousel-section {
     .container {
         padding: 5px;
     }
-
-    .about {
-        padding: 10px;
+    .main-contact {
+        grid-template-columns: 1fr;
     }
 
-    .about-contact h2 {
-        font-size: 1.2rem;
+    .action form input[type="email"], .action form input[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
     }
-
-    .about-contact p {
-        font-size: 0.9rem;
-    }
-
-    .contact {
-        padding: 20px;
-    }
-    
-    .icons a {
-        font-size: 18px;
-        margin: 3px;
-    }  
 }

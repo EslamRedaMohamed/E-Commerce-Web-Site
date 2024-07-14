@@ -96,6 +96,15 @@
       "email": "amir@gmail.com",
       "phone": "01222222222",
       "gender": "Male"
+    },
+    {
+      "id": "52d3",
+      "full_name": "hassan reda",
+      "user_name": "hassan2000",
+      "password": "22222222",
+      "email": "hassan@gmail.com",
+      "phone": "01011111111",
+      "gender": "Male"
     }
   ]
 }
