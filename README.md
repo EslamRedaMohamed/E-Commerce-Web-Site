@@ -35,3 +35,5 @@ The E-Commerce App is designed to provide a seamless shopping experience. Users 
 
 - **Shopping Cart Functionality:**
   - Add products to the shopping
+- **Shopping Cart Functionality:**
+  - Use **[remot json server](https://my-json-server.typicode.com/EslamRedaMohamed/Elsouq-json-server)** to fetch login data for Authentication 
