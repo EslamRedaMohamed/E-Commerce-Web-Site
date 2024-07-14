@@ -313,15 +313,14 @@ section.carousel-section {
         margin-right: 10px;
     }
 
+
     .icons {
         margin-top: 10px;
-        display: flex;
-        justify-content: center; /* Center icons */
-        flex-wrap: wrap; /* Allow icons to wrap */
+        justify-content: center;
     }
 
     .icons a {
-        margin: 5px; /* Add margin for spacing */
+        margin: 5px;
         font-size: 20px;
     }
 
