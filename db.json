@@ -87,6 +87,15 @@
       "email": "amr@gmail.com",
       "phone": "01222222222",
       "gender": "Male"
+    },
+    {
+      "id": "2004",
+      "full_name": "amir",
+      "user_name": "amir2000",
+      "password": "22222222",
+      "email": "amir@gmail.com",
+      "phone": "01222222222",
+      "gender": "Male"
     }
   ]
 }
