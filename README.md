@@ -7,13 +7,8 @@ We'd like to thank the following people who have contributed to this project:
 - **[Kareem Morsy](https://github.com/KareemMMorsy)**
 - ## Table of Contents
 - [Introduction](#introduction)
-- [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Contributors](#contributors)
-- [License](#license)
+- [Features](#features)
 ## Introduction
 
 The E-Commerce App is designed to provide a seamless shopping experience. Users can view products, add them to their cart, and proceed to checkout. The app focuses on providing a responsive and intuitive user interface.
